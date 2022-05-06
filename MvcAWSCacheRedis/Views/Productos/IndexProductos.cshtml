@@ -50,8 +50,12 @@
             </td>
             <td>
                 <a asp-controller="Productos" asp-action="Details" asp-route-id="@item.IdProducto" class="btn btn-info">Detalles</a>
+                <a asp-controller="Productos" asp-action="SeleccionarFavorito" asp-route-id="@item.IdProducto" class="btn btn-info">Favorito</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+<h2 style="color:red">
+    @TempData["MENSAJE"]
+</h2>
