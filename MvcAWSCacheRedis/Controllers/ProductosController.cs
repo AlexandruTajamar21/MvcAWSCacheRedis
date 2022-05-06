@@ -37,7 +37,7 @@ namespace MvcAWSCacheRedis.Controllers
             Producto producto = this.repo.FindProducto(id);
             this.service.AddProductoCache(producto);
             TempData["MENSAJE"] = "Producto "+ producto.Nombre + " almacenado como Favorito";
-            return RedirectToAction("Index");
+            return RedirectToAction("IndexProductos");
         }
 
         public IActionResult Favoritos()
